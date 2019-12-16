@@ -13085,7 +13085,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction-and-Motivation">Introduction and Motivation<a class="anchor-link" href="#Introduction-and-Motivation">&#182;</a></h2><p>Spotify is a great way to stream a wide variety of music. With over 30 million songs to stream from, a user can quickly rack up a huge library of songs. It is very easy to just favorite hundreds of songs as you listen. After a couple hundred songs it can almost seem impossible to organize your library into playlists. This is where data science comes in handy! By the end of this tutorial you will have used machine learning in order to cluster your library into different playlists based on the audio features of your playlist's songs. From there, you'll also be able to discover new music by generating playlists with recommended songs. <br></p>
-<p>On top of the organization this tutorial brings, analyzing spotify data will give you a greater sense of the characteristics of your library. You can learn more about yourself by analyzing certain characteristics of your music: Do you like more 'dancey' songs? or are you more of an instrumental type of listener. All these questions plus more will be explored by the end of the tutorial. <br></p>
+<p>On top of the organization this tutorial brings, analyzing spotify data will give you a greater sense of the characteristics of your library. You can learn more about yourself by analyzing certain characteristics of your music: Do you like more 'dancey' songs? Or are you more of an instrumental type of listener? All these questions plus more will be explored by the end of the tutorial. <br></p>
 
 </div>
 </div>
@@ -13137,7 +13137,7 @@ the following libraries as they will be used heavily:</p>
 collect a user's spotify library. To get access to a users data you must get authorization. The general<br>
 flow is written out below.</p>
 <p>Getting Username:<br></p>
-<p>If you use spotify directly, then your username is the one that you use to login. If you use facebook or another service for authentication then you must follow these steps(<a href="https://community.spotify.com/t5/Accounts/How-do-i-find-my-username-when-using-Facebook-login/td-p/859795">https://community.spotify.com/t5/Accounts/How-do-i-find-my-username-when-using-Facebook-login/td-p/859795</a>) to retrieve your username:</p>
+<p>If you use spotify directly, then your username is the one that you use to login. If you use facebook or another service for authentication then you must follow <a href="https://community.spotify.com/t5/Accounts/How-do-i-find-my-username-when-using-Facebook-login/td-p/859795">these steps</a> to retrieve your username:</p>
 <ol>
 <li><p>Open the Spotify Desktop app.</p>
 </li>
@@ -13158,10 +13158,9 @@ flow is written out below.</p>
 Since we will be reading from your spotify library we need the scope 'user-library-read'. We will also <br>
 be writing to your spotify playlist so the scope 'playlist-modify-public' is needed as well.</p>
 <p>Client_id, client_secret, redirect_uri:<br>
-In order to get your own id, secret and uri you must go to <a href="https://developer.spotify.com/dashboard/applications">https://developer.spotify.com/dashboard/applications</a> and create a client id and secret. Make sure <br>
-that the redirect uri that you choose is EXACTLY the same as what you input for the token. If not, the token won't
+In order to get your own id, secret and uri you must go <a href="https://developer.spotify.com/dashboard/applications">here</a> and create a client id and secret. Make sure that the redirect uri that you choose is EXACTLY the same as what you input for the token. If not, the token won't
 be able to be retrieved. <br></p>
-<p>Another example can be found within the docs here: <a href="https://spotipy.readthedocs.io/en/latest/#authorization-code-flow">https://spotipy.readthedocs.io/en/latest/#authorization-code-flow</a></p>
+<p>Another example can be found within the docs <a href="https://spotipy.readthedocs.io/en/latest/#authorization-code-flow">here</a>.</p>
 
 </div>
 </div>
@@ -13222,7 +13221,7 @@ be able to be retrieved. <br></p>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loading Saved Tracks Now. Please be patient!&#39;</span><span class="p">)</span> <span class="c1"># This part of the code takes a while</span>
 
-<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">tracks</span> <span class="o">=</span> <span class="n">get_saved_tracks</span><span class="p">()</span>
     <span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">track_info</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14627,7 +14626,7 @@ want to add in an interaction term or remove one variable or the other. <br></p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>To find recommended songs, we can use the Spotify API to get similar artists for each of your top artists, then get the top tracks for those artists. The name, artist, and uri for the recommended tracks are stored in the related_tracks dataframe. To make sure the same artists don't get recommended to you, we use the known_artists set to store the artists that are either already in your library or that have already been recommended.</p>
-<p>Because we took the top 25 artists above, are getting 12 similar artists for each of them, and are getting 5 top tracks for each similar artist, the maximum number of recommended songs we can find here is 1500. However, due to duplicate recommendations, the actual number will be lower than this - as you can see, we only found 904 for our dataset. If you want more (or less), you can easily adjust the numbers in the code.</p>
+<p>Because we took the top 25 artists above, are getting 12 similar artists for each of them, and are getting 5 top tracks for each similar artist, the maximum number of recommended songs we can find here is 1500. However, due to duplicate recommendations, the actual number will be lower than this - we only found 904 for our dataset. If you want more (or less), you can easily adjust the numbers in the code.</p>
 
 </div>
 </div>
@@ -15640,19 +15639,6 @@ Name: silhouette, dtype: float64</pre>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
