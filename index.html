@@ -13093,17 +13093,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Required-Libraries">Required Libraries<a class="anchor-link" href="#Required-Libraries">&#182;</a></h2><p>This project requires a basic understanding of python. However, If you are not familiar with the language itself <br>
-but are a strong programmer you should be able to follow along! Before continuing, please familiarize yourself with <br>
-the following libraries as they will be used heavily:</p>
-<p>Intro to Pandas:
-<a href="https://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html">https://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html</a></p>
-<p>Learning the Spotify API through spotipy:
-<a href="https://spotipy.readthedocs.io/en/latest/#">https://spotipy.readthedocs.io/en/latest/#</a></p>
-<p>Learning numpy:
-<a href="https://docs.scipy.org/doc/numpy/reference/">https://docs.scipy.org/doc/numpy/reference/</a></p>
-<p>Learning scikit: 
-<a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></p>
+<h2 id="Required-Libraries">Required Libraries<a class="anchor-link" href="#Required-Libraries">&#182;</a></h2><p>This project requires a basic understanding of python. However, If you are not familiar with the language itself but are a strong programmer you should be able to follow along! Before continuing, please familiarize yourself with the following libraries as they will be used heavily:</p>
+<p><a href="https://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html">Pandas</a>, for storing and manipulating data in dataframes.</p>
+<p><a href="https://spotipy.readthedocs.io/en/latest/#">Spotipy</a>, for easily working with the <a href="https://developer.spotify.com/documentation/web-api/">Spotify API</a>.</p>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/">Numpy</a>, for more powerful arrays.</p>
+<p><a href="https://scikit-learn.org/stable/">Scikit-learn</a>, for machine learning algorithms.</p>
+<p><a href="https://seaborn.pydata.org/index.html">Seaborn</a> and <a href="https://matplotlib.org/">Matplotlib</a> for data visualization.</p>
 <p>It's not necessary to read these docs end to end but its a great idea to flip through each website at least once.</p>
 
 </div>
@@ -13121,7 +13116,6 @@ the following libraries as they will be used heavily:</p>
 <span class="kn">import</span> <span class="nn">spotipy.util</span> <span class="k">as</span> <span class="nn">util</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">cluster</span><span class="p">,</span> <span class="n">decomposition</span><span class="p">,</span> <span class="n">metrics</span>
-<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 </pre></div>
 
@@ -13576,7 +13570,7 @@ be able to be retrieved. <br></p>
 It is good to look at the correlations to see if any variables could potentially explain another variable. 
 If any variable has a high correlation (defined as any correlations with a magnitude higher than .7) than you will
 want to add in an interaction term or remove one variable or the other. <br></p>
-<p>This blog gives a good idea about fancier ways to deal with correlated information. <br> <a href="https://blog.minitab.com/blog/understanding-statistics/handling-multicollinearity-in-regression-analysis">https://blog.minitab.com/blog/understanding-statistics/handling-multicollinearity-in-regression-analysis</a><br></p>
+<p><a href="https://blog.minitab.com/blog/understanding-statistics/handling-multicollinearity-in-regression-analysis">This blog</a> gives a good idea about fancier ways to deal with correlated information.</p>
 <p>With the sample data there is not any two variables that are very highly correlated so there is nothing to deal with.</p>
 
 </div>
@@ -13584,7 +13578,7 @@ want to add in an interaction term or remove one variable or the other. <br></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -13601,174 +13595,229 @@ want to add in an interaction term or remove one variable or the other. <br></p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col0 {
+    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col0 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col1 {
             background-color:  #3b4cc0;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col2 {
             background-color:  #3b4cc0;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col3 {
-            background-color:  #a3c2fe;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col3 {
+            background-color:  #afcafc;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col4 {
             background-color:  #3b4cc0;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col5 {
-            background-color:  #4358cb;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col5 {
+            background-color:  #4961d2;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col0 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row0_col6 {
+            background-color:  #3b4cc0;
+            color:  #f1f1f1;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col0 {
             background-color:  #6384eb;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col1 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col2 {
             background-color:  #d1dae9;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col3 {
-            background-color:  #5e7de7;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col3 {
+            background-color:  #6e90f2;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col4 {
             background-color:  #6c8ff1;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col5 {
-            background-color:  #8fb1fe;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col5 {
+            background-color:  #94b6ff;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col0 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row1_col6 {
+            background-color:  #afcafc;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col0 {
             background-color:  #3b4cc0;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col1 {
             background-color:  #b6cefa;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col2 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col3 {
-            background-color:  #4358cb;
-            color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col3 {
+            background-color:  #536edd;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col4 {
             background-color:  #6282ea;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col5 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col5 {
+            background-color:  #d8dce2;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row2_col6 {
             background-color:  #d6dce4;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col0 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col0 {
             background-color:  #dedcdb;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col1 {
             background-color:  #93b5fe;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col2 {
             background-color:  #9fbfff;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col3 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col3 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col4 {
             background-color:  #688aef;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col5 {
-            background-color:  #3b4cc0;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col5 {
+            background-color:  #4055c8;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col0 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row3_col6 {
+            background-color:  #799cf8;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col0 {
             background-color:  #9bbcff;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col1 {
             background-color:  #a2c1ff;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col2 {
             background-color:  #bad0f8;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col3 {
-            background-color:  #6c8ff1;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col3 {
+            background-color:  #7b9ff9;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col4 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col5 {
-            background-color:  #445acc;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col5 {
+            background-color:  #4a63d3;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col0 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row4_col6 {
+            background-color:  #9bbcff;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col0 {
             background-color:  #9fbfff;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col1 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col1 {
             background-color:  #bad0f8;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col2 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col2 {
             background-color:  #f4c6af;
             color:  #000000;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col3 {
-            background-color:  #3b4cc0;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col3 {
+            background-color:  #4961d2;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col4 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col4 {
             background-color:  #3f53c6;
             color:  #f1f1f1;
-        }    #T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col5 {
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col5 {
             background-color:  #b40426;
             color:  #f1f1f1;
-        }</style><table id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >acousticness</th>        <th class="col_heading level0 col1" >danceability</th>        <th class="col_heading level0 col2" >energy</th>        <th class="col_heading level0 col3" >instrumentalness</th>        <th class="col_heading level0 col4" >tempo</th>        <th class="col_heading level0 col5" >valence</th>    </tr></thead><tbody>
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row5_col6 {
+            background-color:  #81a4fb;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col0 {
+            background-color:  #4c66d6;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col1 {
+            background-color:  #9dbdff;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col2 {
+            background-color:  #dedcdb;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col3 {
+            background-color:  #3b4cc0;
+            color:  #f1f1f1;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col4 {
+            background-color:  #4c66d6;
+            color:  #000000;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col5 {
+            background-color:  #3b4cc0;
+            color:  #f1f1f1;
+        }    #T_45840f18_2044_11ea_9b0e_acde48001122row6_col6 {
+            background-color:  #b40426;
+            color:  #f1f1f1;
+        }</style><table id="T_45840f18_2044_11ea_9b0e_acde48001122" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >acousticness</th>        <th class="col_heading level0 col1" >danceability</th>        <th class="col_heading level0 col2" >energy</th>        <th class="col_heading level0 col3" >instrumentalness</th>        <th class="col_heading level0 col4" >tempo</th>        <th class="col_heading level0 col5" >valence</th>        <th class="col_heading level0 col6" >Cluster</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row0" class="row_heading level0 row0" >acousticness</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col0" class="data row0 col0" >1</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col1" class="data row0 col1" >-0.377397</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col2" class="data row0 col2" >-0.588312</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col3" class="data row0 col3" >0.216891</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col4" class="data row0 col4" >-0.123963</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row0_col5" class="data row0 col5" >-0.110016</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row0" class="row_heading level0 row0" >acousticness</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col0" class="data row0 col0" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col1" class="data row0 col1" >-0.377397</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col2" class="data row0 col2" >-0.588312</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col3" class="data row0 col3" >0.216891</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col4" class="data row0 col4" >-0.123963</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col5" class="data row0 col5" >-0.110016</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row0_col6" class="data row0 col6" >-0.492914</td>
             </tr>
             <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row1" class="row_heading level0 row1" >danceability</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col0" class="data row1 col0" >-0.377397</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col1" class="data row1 col1" >1</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col2" class="data row1 col2" >0.132252</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col3" class="data row1 col3" >-0.009904</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col4" class="data row1 col4" >0.0516756</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row1_col5" class="data row1 col5" >0.149749</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row1" class="row_heading level0 row1" >danceability</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col0" class="data row1 col0" >-0.377397</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col1" class="data row1 col1" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col2" class="data row1 col2" >0.132252</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col3" class="data row1 col3" >-0.009904</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col4" class="data row1 col4" >0.0516756</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col5" class="data row1 col5" >0.149749</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row1_col6" class="data row1 col6" >0.0265108</td>
             </tr>
             <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row2" class="row_heading level0 row2" >energy</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col0" class="data row2 col0" >-0.588312</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col1" class="data row2 col1" >0.132252</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col2" class="data row2 col2" >1</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col3" class="data row2 col3" >-0.10783</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col4" class="data row2 col4" >0.0171763</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row2_col5" class="data row2 col5" >0.397619</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row2" class="row_heading level0 row2" >energy</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col0" class="data row2 col0" >-0.588312</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col1" class="data row2 col1" >0.132252</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col2" class="data row2 col2" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col3" class="data row2 col3" >-0.10783</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col4" class="data row2 col4" >0.0171763</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col5" class="data row2 col5" >0.397619</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row2_col6" class="data row2 col6" >0.21441</td>
             </tr>
             <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row3" class="row_heading level0 row3" >instrumentalness</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col0" class="data row3 col0" >0.216891</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col1" class="data row3 col1" >-0.009904</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col2" class="data row3 col2" >-0.10783</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col3" class="data row3 col3" >1</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col4" class="data row3 col4" >0.0393062</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row3_col5" class="data row3 col5" >-0.142701</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row3" class="row_heading level0 row3" >instrumentalness</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col0" class="data row3 col0" >0.216891</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col1" class="data row3 col1" >-0.009904</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col2" class="data row3 col2" >-0.10783</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col3" class="data row3 col3" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col4" class="data row3 col4" >0.0393062</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col5" class="data row3 col5" >-0.142701</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row3_col6" class="data row3 col6" >-0.203425</td>
             </tr>
             <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row4" class="row_heading level0 row4" >tempo</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col0" class="data row4 col0" >-0.123963</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col1" class="data row4 col1" >0.0516756</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col2" class="data row4 col2" >0.0171763</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col3" class="data row4 col3" >0.0393062</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col4" class="data row4 col4" >1</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row4_col5" class="data row4 col5" >-0.104967</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row4" class="row_heading level0 row4" >tempo</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col0" class="data row4 col0" >-0.123963</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col1" class="data row4 col1" >0.0516756</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col2" class="data row4 col2" >0.0171763</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col3" class="data row4 col3" >0.0393062</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col4" class="data row4 col4" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col5" class="data row4 col5" >-0.104967</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row4_col6" class="data row4 col6" >-0.0579379</td>
             </tr>
             <tr>
-                        <th id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8level0_row5" class="row_heading level0 row5" >valence</th>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col0" class="data row5 col0" >-0.110016</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col1" class="data row5 col1" >0.149749</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col2" class="data row5 col2" >0.397619</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col3" class="data row5 col3" >-0.142701</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col4" class="data row5 col4" >-0.104967</td>
-                        <td id="T_52ffc52a_2034_11ea_8bc2_784f439ec6c8row5_col5" class="data row5 col5" >1</td>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row5" class="row_heading level0 row5" >valence</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col0" class="data row5 col0" >-0.110016</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col1" class="data row5 col1" >0.149749</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col2" class="data row5 col2" >0.397619</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col3" class="data row5 col3" >-0.142701</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col4" class="data row5 col4" >-0.104967</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col5" class="data row5 col5" >1</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row5_col6" class="data row5 col6" >-0.168019</td>
+            </tr>
+            <tr>
+                        <th id="T_45840f18_2044_11ea_9b0e_acde48001122level0_row6" class="row_heading level0 row6" >Cluster</th>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col0" class="data row6 col0" >-0.492914</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col1" class="data row6 col1" >0.0265108</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col2" class="data row6 col2" >0.21441</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col3" class="data row6 col3" >-0.203425</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col4" class="data row6 col4" >-0.0579379</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col5" class="data row6 col5" >-0.168019</td>
+                        <td id="T_45840f18_2044_11ea_9b0e_acde48001122row6_col6" class="data row6 col6" >1</td>
             </tr>
     </tbody></table>
 </div>
@@ -13786,8 +13835,8 @@ want to add in an interaction term or remove one variable or the other. <br></p>
 <p>It is a good idea to get a good sense about how your data is distributed. The initial summary statistics gave us a good sense the mean and standard deviation but it is nice to get a look at the data to see if your preferences are skewed in one way or the other. <br></p>
 <p>Some cool observations from the sample data: <br></p>
 <p>Most of the songs in the data set are not acoustic. The distribution is skewed all the way right. <br></p>
-<p>Danceibility is normally distributed but is slightly skewed left<br></p>
-<p>To make the plots we have to make 6 different figures. One for each feature. The code below is pretty repetitive but the general idea is to add a subplot, set a title, and call distplot on each feature.</p>
+<p>Danceability is normally distributed but is slightly skewed left.<br></p>
+<p>To make the plots we have to make 6 different figures, one for each feature. The code below is pretty repetitive but the general idea is to add a subplot, set a title, and call distplot on each feature.</p>
 
 </div>
 </div>
@@ -14405,7 +14454,7 @@ want to add in an interaction term or remove one variable or the other. <br></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It'll also be interesting to look at how the clusters differ in their distributions of audio features. To do this we can use the <a href="https://seaborn.pydata.org/index.html">seaborn</a> library to make <a href="https://seaborn.pydata.org/generated/seaborn.violinplot.html">violin plots</a> Each of the following violin plots are for one feature, where each violin represents a cluster (the cluster labels are shown on the bottom row). If you aren't familiar with how a violin plot works, it displays the distribution of the y-value (in this case an audio feature) for each cluster, plotted side by side so we can compare their distributions. It's essentially a cooler looking boxplot.</p>
+<p>It'll also be interesting to look at how the clusters differ in their distributions of audio features. To do this we can use the seaborn library to make <a href="https://seaborn.pydata.org/generated/seaborn.violinplot.html">violin plots</a> Each of the following violin plots are for one feature, where each violin represents a cluster (the cluster labels are shown on the bottom row). If you aren't familiar with how a violin plot works, it displays the distribution of the y-value (in this case an audio feature) for each cluster, plotted side by side so we can compare their distributions. It's essentially a cooler looking boxplot.</p>
 <p>The plots allow us to see which features "define" or are most unique to each cluster. For example, it appears that pretty much every song with high instrumentalness went into cluster 1, while every cluster has a fairly widespread distribution of danceabilities. While many clusters have similar distributions for multiple features, there is typically at least one feature that makes each one distinct.</p>
 
 </div>
